@@ -1,9 +1,9 @@
 // imports
 const path = require('path');
-const fastifyStatic = require('fastify-static')
-const fastify = require('fastify')({
-    logger: true,
-});
+const express = require('express');
+
+// running our express application
+const fastify = express();
   
 // Declaring routes
 fastify.get('/', function (request, reply) {
@@ -220,8 +220,8 @@ fastify.get('/api/v1/auctions/:collectibleId', function (request, reply) {
             tokenType: "erc721",
             collectiCurrectBit: "5400",
             bidEndDate: "01/16/2021",
-            collectibleDisplayType: "video",
-            collectibleDisplayURL: "https://mediagateway.sweet.io/media/series/wX1O0Bbm/media.mp4",
+            collectibleDisplayType: "image",
+            collectibleDisplayURL: "https://collectible.sweet.io/series/931/image-front.jpg",
             displayImage: "https://collectible.sweet.io/series/931/image-front.jpg",
         },
         {
@@ -396,12 +396,10 @@ fastify.get('/api/v1/sales/:collectibleId', function (request, reply) {
 });
 
 if (process.env.NODE_ENV === 'production') {
-    fastify.register(fastifyStatic, {
-        root: path.join(__dirname, 'client/build')
-    });
-  
+    fastify.use(express.static('client/build'));
+
     fastify.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
   
