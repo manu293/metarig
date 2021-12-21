@@ -1,9 +1,17 @@
 // imports
+const cors = require('cors');
 const path = require('path');
 const express = require('express');
 
 // running our express application
 const fastify = express();
+
+const corsOptions = {
+    origin: 'https://calm-scrubland-64533.herokuapp.com/',
+    credentials: true,
+};
+
+fastify.use(cors(corsOptions));
   
 // Declaring routes
 fastify.get('/', function (request, reply) {
@@ -398,16 +406,14 @@ fastify.get('/api/v1/sales/:collectibleId', function (request, reply) {
 if (process.env.NODE_ENV === 'production') {
     fastify.use(express.static('client/build'));
 
-    fastify.get('*', (req, res) => {
+    fastify.get('/*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
   
 // Run the server!
-fastify.listen(process.env.PORT || 3001, function (err, address) {
-    if (err) {
-      fastify.log.error(err)
-      process.exit(1)
-    }
-    console.log("Server is listening on", address);
+const PORT = process.env.PORT || 3001;
+
+fastify.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`);
 });
