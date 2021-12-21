@@ -14,9 +14,6 @@ const corsOptions = {
 fastify.use(cors(corsOptions));
   
 // Declaring routes
-fastify.get('/', function (request, reply) {
-    reply.send({ hello: 'world' })
-});
 
 fastify.get('/api/v1/featuredCollections', function (request, reply) {
     const featuredCollections = [
