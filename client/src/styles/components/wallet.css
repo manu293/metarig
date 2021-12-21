@@ -1,0 +1,125 @@
+.walletContainer {
+    background-color: rgba(107,114,128,0.75);
+    z-index: 20;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.walletPaymentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.walletPaymentCloseContiner {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.walletPaymentCloseButton {
+    padding: 0.5rem;
+    border: 1px solid #272727;
+    background-color: #272727;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.walletPaymentMethodContainer {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+
+.walletPaymentMethodHeaderContainer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1rem;
+}
+
+.walletPaymentMethodText {
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ff2e63;
+    font-size: 20px;
+}
+
+.walletPaytmentSection {
+    background-color: #fff;
+    border-color: #fff;
+    padding: 1rem;
+}
+
+.walletItemContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.walletItemText {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.walletMarginTop {
+    margin-top: 1rem;
+}
+
+.walletFooterContainer {
+    background-color: #fff;
+    border-top: 1px solid #5a5a5a;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem;
+}
+
+.walletFooterContentContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.walletCircularDot {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(143, 0, 51);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.walletFooterText {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+/* mobile design */
+@media only screen and (max-width: 768px) {
+
+
+    .walletPaymentContainer {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+}

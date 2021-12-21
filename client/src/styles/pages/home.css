@@ -1,0 +1,18 @@
+.homeContainer {
+    padding-top: 1rem;
+    background-color: #272727;
+    height: 100%;
+}
+
+.homeFeatureCollectionContainer {
+    margin: 0 16vw;
+}
+
+/* mobile design */
+@media only screen and (max-width: 768px) {
+
+    .homeFeatureCollectionContainer {
+        margin: 0 2vw;
+    }  
+
+}

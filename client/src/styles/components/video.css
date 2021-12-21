@@ -1,0 +1,26 @@
+.videoContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 4%;
+}
+
+.videoVolumeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.videoVolumeIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.2);
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}

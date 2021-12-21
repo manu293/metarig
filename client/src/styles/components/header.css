@@ -1,0 +1,270 @@
+.headerContiner {
+    display: flex;
+    z-index: 20;
+    padding: 1rem 1rem;
+    align-items: center;
+    background-color: #272727;
+}
+
+.headerIcon {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff; 
+    letter-spacing: 1px;
+}
+
+.headerSearchBarContainer {
+    display: flex;
+    position: relative;
+    flex: 1 1 0%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #3d3d3d;
+    border-radius: 50vh;
+    margin: 0px 20px 0px 15px;
+    padding: 0.6rem 1rem;
+}
+
+.headerSearchInputField {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    padding: 0 0.4rem;
+}
+
+.headerSearchInputField::placeholder {
+    color: #6d6d6d;
+}
+
+.headerSearchInputField:hover, 
+.headerSearchInputField:active,
+.headerSearchInputField:focus {
+    border: none;
+    outline: none;
+}
+
+.headerInfoSection {
+    display: flex;
+    justify-content: center;
+}
+
+.headerInfoSectionContainer {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #5a5a5a;
+}
+
+.headerInfoSectionItems {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+}
+
+.headerInfoSectionContent {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+.headerButtonContainer {
+    padding-left: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerButton {
+    cursor: pointer;
+    padding: 0.938rem;
+    border-radius: 2.5rem;
+    background-color: #333333;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ff2e63;
+}
+
+.headerMobileMenuIcon {
+    display: none;
+}
+
+.searchResultModalContainer {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 150%;
+    background-color: #353535;
+    border-radius: 10px;
+    z-index: 2;
+    padding: 20px 30px;
+    min-height: 500px;
+}
+
+.searchResultModalTextContainer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #5a5a5a;
+}
+
+.searchResultModelTextDefault {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+.searchResultModelText {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    color: #ff2e63;
+}
+
+.searchResultModelMarketPlaceContainer {
+    margin: 0.5rem;
+}
+
+.searchResultModelTextContainer {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+.searchResultModelContentContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchResultModalMobileContainer {
+    display: none;
+}
+
+/* mobile design */
+@media only screen and (max-width: 768px) {
+    
+    .headerInfoSection {
+        display: none;
+    }
+
+    .headerMobileMenuIcon {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobileMenuContainer {
+        right: 0px;
+        z-index: 10;
+        width: 60%;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        box-shadow: -21px, 0, 18px, #00000040;
+        background-color: #212121;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobileMenuCloseContainer {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0.5rem;
+        border-bottom: 1px solid #5a5a5a;
+        padding: 0.5rem;
+    }
+
+    .mobileMenuConnectContainer {
+        display: flex;
+        margin: 0.5rem;
+        border-bottom: 1px solid #5a5a5a;
+        padding: 0.5rem;
+    }
+
+    .mobileConnectButton {
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #ff2e63;
+        font-size: 20px;
+        padding-bottom: 0.7rem;
+    }
+
+    .mobileMenuListContainer {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .mobileMenuUnorderedList {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobileMenuListItem {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .mobileMenuListItemText {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #fff;
+    }
+
+    .searchResultModalContainer {
+        display: none;
+    }
+
+    .searchResultModalMobileContainer {
+        display: block;
+        position: fixed;
+        inset: 0px;
+        z-index: 25;
+        overflow-y: scroll;
+        background-color: #353535;
+        padding: 10px;
+    }
+
+    .mobileSearchHeaderContainer {
+        margin: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        border-bottom: 1px solid #5a5a5a;
+        padding-bottom: 1em;
+    }
+
+    .mobileSearchHeaderText {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #fff;
+    }
+
+    .mobileContentContainer {
+        margin: 1rem 0;
+    }
+
+    .mobileSearchInputContainer {
+        margin: 1rem 0;
+    }
+
+}

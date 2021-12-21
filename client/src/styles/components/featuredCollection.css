@@ -1,0 +1,238 @@
+.featuredCollectionCardContainer {
+    box-shadow: rgb(0 0 0 / 30%) 5px 5px 20px 5px;
+    background-color: #272727;
+    display: flex;
+    border-radius: 30px;
+    padding: 30px;
+    width: 100%;
+}
+
+.featuredCollectionCardContainerMargin {
+    margin-bottom: 5%;
+}
+
+.featureCollectionCardSection {
+    display: flex;
+}
+
+.featureCollectionCardImage {
+    width: 30%;
+}
+
+.featureCollectionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: unset;
+}
+
+.featureCollectionCardContent {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5%;
+    justify-content: space-between;
+}
+
+.collectibleInitatorContainer {
+    display: flex;
+    align-items: center;
+}
+
+.collectibleInitatorAvatar {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+
+.collectibleInitatorName {
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 1px; 
+}
+
+.collectibleInitatorVerified {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.collectibleNameContainer {
+    margin: 3% 0;
+    cursor: pointer;
+}
+
+.collectibleNameText {
+    font-size: 28px;
+    line-height: 36px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 1px; 
+}
+
+.collectibleBidContainer {
+    display: flex;
+    width: 100%;
+}
+
+.collectibleBitSeciton {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1%;
+    align-items: center;
+}
+
+.collecitbleBidText {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.collectibleBidAmount {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    width: 90%;
+}
+
+.collectibleDateContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.collectibleDateSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.collectibleSubSection {
+    width: 45px;
+    height: 45px;
+    background-color: #393939;
+    border-radius: 10px;
+    line-height: 22px;
+}
+
+.collectibleSubScetionName {
+    font-size: 22px;
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+
+.collectibleSubNames {
+    display: block;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 0.2rem;
+}
+
+.collectionBidButtonContainer {
+    border-radius: 10px;
+    width: 100%;
+    background-color: #ff2e63;
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+}
+
+.collectionBidButtonText {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.featureCollectionMobileCardSection {
+    display: none;
+}
+
+.bidButtonLink {
+    text-decoration: none;
+}
+
+/* mobile design */
+@media only screen and (max-width: 768px) {
+
+    .featureCollectionCardSection {
+        display: none;
+    }
+
+    .featureCollectionMobileCardSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .featureCollectionImageMobile {
+        width: 100%;
+        height: 300px;
+        object-fit: unset;
+    }
+
+    .collectibleInitatorContainerMobile {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .collectibleNameTextMobile {
+        font-size: 20px;
+        line-height: 25px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #fff;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .collectibleBidAmountMobile {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 40px;
+        padding: 10px 20px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    .collectibleBitSecitonMobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1%;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+}
