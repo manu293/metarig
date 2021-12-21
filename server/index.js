@@ -1,4 +1,6 @@
 // imports
+const path = require('path');
+const fastifyStatic = require('fastify-static')
 const fastify = require('fastify')({
     logger: true,
 });
@@ -392,6 +394,16 @@ fastify.get('/api/v1/sales/:collectibleId', function (request, reply) {
 
     reply.send({ filterSalesList })
 });
+
+if (process.env.NODE_ENV === 'production') {
+    fastify.register(fastifyStatic, {
+        root: path.join(__dirname, 'client/build')
+    });
+  
+    fastify.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
   
 // Run the server!
 fastify.listen(process.env.PORT || 3001, function (err, address) {
